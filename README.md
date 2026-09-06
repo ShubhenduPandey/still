@@ -32,12 +32,6 @@ Mobile-sized captures of the running web preview. Native iOS and Android appeara
 
 The session clock uses elapsed time with `requestAnimationFrame` to update the guide. No backend, cloud database, account system, or health integration is used in V1. Exact package versions are recorded in `package.json` and `package-lock.json`.
 
-## Web and PWA roadmap
-
-Still is planned to be available directly from a desktop browser and a mobile browser, using the same breathing experience without requiring a native app installation.
-
-We also plan to add Progressive Web App (PWA) support. Once enabled, users will be able to add Still to their device home screen and use it like an installed app without downloading it from Google Play or the Apple App Store. Browser support for vibration, audio behavior, offline use, and screen wake may vary by device and browser.
-
 ## Included in this first version
 
 - Lungs (default), Orb, Tide, Minimal Timer, and Path, with live previews.
@@ -107,3 +101,13 @@ Health integration is explicitly deferred to V2. No session history is stored ye
 - `tests/breathing.test.ts`: timing tests.
 
 Official references: [Expo SDK](https://docs.expo.dev/versions/latest/), [audio](https://docs.expo.dev/versions/latest/sdk/audio/), [haptics](https://docs.expo.dev/versions/latest/sdk/haptics/).
+
+## V2 roadmap
+
+- Make Still available from desktop browsers.
+- Make Still available from mobile browsers.
+- Add Progressive Web App (PWA) support so users can add Still to their device home screen and use it without installing from Google Play or the Apple App Store.
+- Support offline use where the browser and device allow it.
+- Add health-app integration for supported platforms.
+
+Browser support for vibration, audio behavior, offline use, and screen wake may vary by device and browser.
