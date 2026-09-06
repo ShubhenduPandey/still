@@ -18,7 +18,7 @@ Mobile-sized captures of the running web preview. Native iOS and Android appeara
 | React 19 | Components, state, and screen composition |
 | React Native 0.86 | Shared mobile interface for iOS and Android |
 | Expo SDK 57 | Mobile development tooling and native modules |
-| React Native SVG | Orb, Tide, Minimal Timer, Path, and Lungs visuals |
+| React Native SVG | Lungs, Orb, Tide, Minimal Timer, and Path visuals |
 | Expo Audio | Locally bundled, synthesized chime at phase changes |
 | Expo Haptics | Optional vibration cues |
 | Expo Keep Awake | Keeps the screen awake during active sessions |
@@ -32,11 +32,17 @@ Mobile-sized captures of the running web preview. Native iOS and Android appeara
 
 The session clock uses elapsed time with `requestAnimationFrame` to update the guide. No backend, cloud database, account system, or health integration is used in V1. Exact package versions are recorded in `package.json` and `package-lock.json`.
 
+## Web and PWA roadmap
+
+Still is planned to be available directly from a desktop browser and a mobile browser, using the same breathing experience without requiring a native app installation.
+
+We also plan to add Progressive Web App (PWA) support. Once enabled, users will be able to add Still to their device home screen and use it like an installed app without downloading it from Google Play or the Apple App Store. Browser support for vibration, audio behavior, offline use, and screen wake may vary by device and browser.
+
 ## Included in this first version
 
 - Lungs (default), Orb, Tide, Minimal Timer, and Path, with live previews.
-- Default rhythm: inhale 4 seconds, hold 0, exhale 6. Adjustable inhale/exhale from 1–20 seconds, hold from 0–20 seconds.
 - Path uses three triangle sides when holding is enabled, or two circular arcs when hold is zero.
+- Default rhythm: inhale 4 seconds, hold 0, exhale 6. Adjustable inhale/exhale from 1–20 seconds, hold from 0–20 seconds.
 - Lungs fill during inhale, stay full during hold, and empty during exhale.
 - Sessions from 1–30 minutes, pause/resume, early ending, and a completion screen.
 - Dark theme by default, an optional light theme, and independently switchable chime and haptics.
