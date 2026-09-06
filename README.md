@@ -2,14 +2,44 @@
 
 A free breathing companion for iOS and Android, built with React Native, Expo SDK 57, and TypeScript. A web preview uses the same app code.
 
+## Screenshots
+
+Mobile-sized captures of the running web preview. Native iOS and Android appearance may differ slightly.
+
+| Home · dark | Lungs breathing session | Preferences · light |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/home-dark.png" alt="Still dark home screen with Lungs selected" width="240"> | <img src="docs/screenshots/breathing-dark.png" alt="Lungs emptying during an active exhale with countdown and pause controls" width="240"> | <img src="docs/screenshots/preferences-light.png" alt="Light preferences screen showing breathing timings, sound, vibration, and theme options" width="240"> |
+
+## Tech stack
+
+| Technology | Role |
+| --- | --- |
+| TypeScript | Typed app logic, settings validation, and breathing calculations |
+| React 19 | Components, state, and screen composition |
+| React Native 0.86 | Shared mobile interface for iOS and Android |
+| Expo SDK 57 | Mobile development tooling and native modules |
+| React Native SVG | Orb, Tide, Minimal Timer, Path, and Lungs visuals |
+| Expo Audio | Locally bundled, synthesized chime at phase changes |
+| Expo Haptics | Optional vibration cues |
+| Expo Keep Awake | Keeps the screen awake during active sessions |
+| AsyncStorage | Saves preferences on the device |
+| React Native Safe Area Context | Layout around device safe areas |
+| Expo Status Bar | Status-bar appearance for light and dark themes |
+| React Native Web + React DOM | Browser preview from the same app code |
+| Node.js + npm | Local development runtime and dependency management |
+| Node.js test runner | Breathing logic and settings-validation tests |
+| Expo EAS | Prepared cloud build and store-submission profiles |
+
+The session clock uses elapsed time with `requestAnimationFrame` to update the guide. No backend, cloud database, account system, or health integration is used in V1. Exact package versions are recorded in `package.json` and `package-lock.json`.
+
 ## Included in this first version
 
-- Orb, Tide, Minimal Timer, Path, and Lungs, with live previews.
+- Lungs (default), Orb, Tide, Minimal Timer, and Path, with live previews.
 - Default rhythm: inhale 4 seconds, hold 0, exhale 6. Adjustable inhale/exhale from 1–20 seconds, hold from 0–20 seconds.
 - Path uses three triangle sides when holding is enabled, or two circular arcs when hold is zero.
 - Lungs fill during inhale, stay full during hold, and empty during exhale.
 - Sessions from 1–30 minutes, pause/resume, early ending, and a completion screen.
-- Light and dark themes, independently switchable chime and haptics.
+- Dark theme by default, an optional light theme, and independently switchable chime and haptics.
 - Preferences saved locally; no accounts, ads, analytics, server, or health permissions.
 - Screen-reader phase announcements and a minimal timer when the device requests reduced motion.
 - Screen stays awake during an active session. Leaving the foreground pauses the session; returning requires an explicit resume.
