@@ -2,6 +2,8 @@
 
 A free breathing companion for iOS and Android, built with React Native, Expo SDK 57, and TypeScript. A web preview uses the same app code.
 
+**Live app:** [still-4tb.pages.dev](https://still-4tb.pages.dev/)
+
 ## Screenshots
 
 Mobile-sized captures of the running web preview. Native iOS and Android appearance may differ slightly.
@@ -111,3 +113,5 @@ Official references: [Expo SDK](https://docs.expo.dev/versions/latest/), [audio]
 - Add health-app integration for supported platforms.
 
 Browser support for vibration, audio behavior, offline use, and screen wake may vary by device and browser.
+
+
